@@ -1,3 +1,8 @@
+/*!
+ * jQuery QueryBuilder 2.5.0
+ * Copyright 2014-2022 Damien "Mistic" Sorel (http://www.strangeplanet.fr)
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+ */
 $theme-name: default !default;
 
 // common
@@ -66,7 +71,7 @@ $ticks-position: 5px, 10px !default;
 
     .group-conditions {
       margin-right: 40px;
-
+      
       .btn.readonly:not(.active),
       input[name$='_cond'] {
         border: 0;
@@ -183,4 +188,9 @@ $ticks-position: 5px, 10px !default;
 }
 
 // import
+@import "plugins/_bt-checkbox";
+@import "plugins/_bt-tooltip-errors";
+@import "plugins/_filter-description";
+@import "plugins/_invert";
+@import "plugins/_sortable";
 // endimport

@@ -1,18 +1,34 @@
-{
+/*!
+ * jQuery QueryBuilder 2.5.0
+ * Locale: Spanish (es)
+ * Author: "pyarza", "kddlb"
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+ */
+
+(function(root, factory) {
+    if (typeof define == 'function' && define.amd) {
+        define(['jquery', 'query-builder'], factory);
+    }
+    else {
+        factory(root.jQuery);
+    }
+}(this, function($) {
+"use strict";
+
+var QueryBuilder = $.fn.queryBuilder;
+
+QueryBuilder.regional['es'] = {
   "__locale": "Spanish (es)",
   "__author": "\"pyarza\", \"kddlb\"",
-
   "add_rule": "Añadir regla",
   "following_conditions": "de las siguientes reglas:",
   "add_group": "Añadir grupo",
   "delete_rule": "Borrar",
   "delete_group": "Borrar",
-
   "conditions": {
     "AND": "Todas",
     "OR": "Cualquiera"
   },
-
   "operators": {
     "equal": "igual",
     "not_equal": "distinto",
@@ -35,7 +51,6 @@
     "is_null": "es nulo",
     "is_not_null": "no es nulo"
   },
-
   "errors": {
     "no_filter": "No se ha seleccionado ningún filtro",
     "empty_group": "El grupo está vacío",
@@ -61,4 +76,7 @@
     "boolean_not_valid": "No es booleano",
     "operator_not_multiple": "El operador \"{1}\" no puede aceptar valores multiples"
   }
-}
+};
+
+QueryBuilder.defaults({ lang_code: 'es' });
+}));
